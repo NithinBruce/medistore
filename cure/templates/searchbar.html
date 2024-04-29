@@ -1,0 +1,26 @@
+{% extends 'layout/app-layout.html' %}
+
+{% block 'content' %}
+<div>
+    <br><br>
+    <h1>Medicines</h1><hr>
+    <br><br>
+    <table class="table table-bordered table-hover shadow  bg-white rounded">
+        <thead class="thead-dark">
+        <tr><th>Medicine_Id</th>
+            <th>Medicine_Name</th>
+            <th>Medicine_Description</th>
+            <th>Medicine_Price</th>
+        </thead>
+        {%for products in medicines %}  
+        <tr>
+        <td>{{products.id}}</td>
+        <td>{{ products.name }} </td>
+        <td>{{ products.description }} </td>
+        <td>{{ products.price }}</td>
+        </tr>
+        {% endfor %}
+    </table> 
+</div>
+
+{% endblock %}

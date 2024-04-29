@@ -1,0 +1,41 @@
+ .form-control{
+    display: block;
+    margin: auto;
+} 
+/* add.html */
+h1,h3{
+    text-align: center;
+    
+}
+
+
+form{
+    display: block;
+    margin: auto;
+}
+button{
+    margin-top: 100px;
+  
+}
+.form-layout{
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100px;
+    
+}
+.body{
+    background-image: url("/static/med.jpg"); 
+    background-color: rgb(34, 197, 197);
+    background-repeat: no-repeat;
+    /* position: fixed; */
+    /* background-size: cover; */
+    height: 100vh;
+    
+} 
+#search{
+    justify-content: end;
+    align-items: flex-end;
+}
+.card{
+    overflow: hidden;
+}

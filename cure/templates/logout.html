@@ -1,0 +1,18 @@
+{% extends "layout/app-layout.html" %}
+
+{% block 'content' %}
+  {% if user.is_authenticated %}
+  <div class='text-center'> 
+    <br><br> 
+    <h1>LOGOUT</h1>
+    <hr><br><br>
+  <p>You are currently logged in as {{ user.username }}.</p>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-primary  w-50">Log Out</button>
+    </form>
+  {% else %}
+    <p>You are not currently logged in.</p>
+  {% endif %}
+  </div>
+{% endblock %}

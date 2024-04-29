@@ -1,0 +1,19 @@
+{% extends 'layout/app-layout.html' %}
+{%load crispy_forms_tags%}
+{% block 'content' %}
+
+ 
+  <form method="post">
+    {% csrf_token %}
+    <br><br>
+    <h1>LOGIN</h1>
+    <hr><br><br><br>
+    <div class="container jumbotron">
+    {{form|crispy }}
+    <button type="submit" class="btn btn-primary btn-block w-100">Login</button>
+    </div>
+    <div class="text-center">
+      <p>Don't Have an Account ?<a href="{%url 'signup' %}">Create one</a>
+    </div>
+  </form>
+{% endblock %}

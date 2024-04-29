@@ -1,0 +1,28 @@
+{%extends 'layout/app-layout.html'%}
+{%block 'content' %}
+<div class="justify-content-center">
+<br><br>
+<h1>Medicine List</h1>
+<hr><br><br>
+<table class="table table-bordered table-hover shadow p-3 mb-5 bg-white rounded ">
+    <thead class="thead-dark">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th colspan="2" class="text-center">Actions</th></tr>
+        {%for products in medicine_list%}
+    <tr>
+    </thead>
+    <td>{{ products.id }} </td> 
+    <td>{{ products.name }} </td> 
+    <td>{{ products.price }}</td>
+    <td>{{products.description}}</td>
+    <td ><a href="{%url 'updateproduct' products.pk %}" class="btn btn-block btn-success " value="edit" type="submit">Edit</a></td>
+    <td><a href="{%url 'deleteproduct' products.pk %}" class="btn btn-danger btn-block" value="edit" type="submit">Delete</a></td></tr>
+     {% endfor %}
+    </table> 
+</div>
+
+{%endblock%}

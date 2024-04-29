@@ -1,0 +1,20 @@
+{% extends 'layout/app-layout.html' %}
+{%load crispy_forms_tags%}
+
+{% block 'content' %}
+  
+  <form method="post">
+    {% csrf_token %}
+    <br><br>
+    <h1>Create Your Account</h1>
+    <hr><br><br>
+    <div class="container jumbotron form-layout">
+      
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary btn-block w-100">Create Account</button>
+    </div>
+    <div class="text-center">
+      <p>Already Have an Account ?<a href="{%url 'login' %}">Login</a>
+    </div>
+  </form>
+{% endblock %}

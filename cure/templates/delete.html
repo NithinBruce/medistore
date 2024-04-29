@@ -1,0 +1,13 @@
+{% extends 'layout/app-layout.html'%}
+{%block 'content' %}
+
+<form method="post" action="">
+    {% csrf_token %}
+    <div class="text-center">    
+    <br><br><br>
+    <p>Are you sure you want to delete "{{product.name}}"?</p>
+    <br>
+    <input type="submit" value="Confirm" class="btn btn-info w-25">
+    </div>
+</form>
+{% endblock %}
