@@ -1,4 +1,4 @@
-MediStore
+# MediStore
 ---------
 
 
@@ -9,7 +9,7 @@ Royal Care Pharmacy is a Django-based application designed for efficiently manag
 
 Features
 ---------
-Web Application
+## Web Application
 
 User Authentication: Allows users to sign up and log in securely.
 
