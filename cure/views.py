@@ -11,11 +11,9 @@ from .models import Medicine
 def home(request):
      return render(request,'home.html')
 
-#For removing the validation from display in browser
 class CustomUserCreationForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # Hide the password criteria from displaying in the browser
         self.fields['username'].help_text=None
         self.fields['password1'].help_text = None
         self.fields['password2'].help_text = None
@@ -30,7 +28,7 @@ def signup(request):
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             form.save() 
-            return redirect('Home')
+            return redirect('login')
             
     else:
         form = CustomUserCreationForm()

@@ -23,9 +23,8 @@ button{
     width: 100px;
     
 }
-.body{
-    background-image: url("/static/med.jpg"); 
-    background-color: rgb(34, 197, 197);
+.body{ 
+    background-color: #22c5c5;
     background-repeat: no-repeat;
     /* position: fixed; */
     /* background-size: cover; */
